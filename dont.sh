@@ -1,8 +1,8 @@
-sudo apt upgrade
-sudo apt update
-sudo apt install streamlink unzip-y --fix-missing
-wget -c https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip --no-check-certicicate
-unzip ngrok-stable-linux-amd64.zip
+sudo apt upgrade -y
+sudo apt update -y
+sudo apt install streamlink unzip apache2 -y --fix-missing
+curl -o ngrok.zip https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
+unzip ngrok.zip
 ./ngrok authtoken 4rYuvATyw19Cmk3yuxJDe_4SssNTEb27EE1U4es17pJ
 sudo service apache2 start
 
