@@ -1,2 +1,2 @@
 sudo cp output.ts /var/www/html/
-ngrok http 80
+./ngrok http 80
