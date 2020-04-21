@@ -1,5 +1,5 @@
 sudo cp output.ts /var/www/html/
 cd /var/www/html/
-rm index.html
+sudo rm index.html
 curl -o index.html https://animeshxd.github.io/private/index.html
 ./ngrok http 80
