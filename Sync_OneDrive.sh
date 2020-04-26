@@ -11,3 +11,4 @@ make DC=ldmd2
 mkdir -p ~/.config/onedrive
 cp ./config ~/.config/onedrive/config
 nano ~/.config/onedrive/config
+onedrive
