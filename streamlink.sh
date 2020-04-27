@@ -1,5 +1,5 @@
-sudo apt upgrade -y
 sudo apt update -y
+sudo apt upgrade -y
 sudo apt install streamlink unzip apache2 -y --fix-missing
 curl -o ngrok.zip https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
 unzip ngrok.zip
