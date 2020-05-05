@@ -12,7 +12,7 @@ I don't  know about it.  please don't  use it.
  
 - ## Other Files (edit)
   - [Sync_OneDrive.sh](https://animeshxd.github.io/private/Sync_OneDrive.sh) --OneDrive Sync 
-  - [client_secret.json](https://animeshxd.github.io/private/client_secret.json) --Google Drive API Credentials.json as client_secret.json [click here](https://developers.google.com/drive/api/v3/quickstart/python) to get your own json file
+  - [client_secret.json](https://animeshxd.github.io/private/client_secret.json) --Google Drive API Credentials.json as client_secret.json | [click here](https://developers.google.com/drive/api/v3/quickstart/python) to get your own json file
   - [gdrive-upload.zip](https://animeshxd.github.io/private/gdrive-upload.zip) --Personal Google Drive uploader for .ts file
   - [streamlink_apache2_ngrok.py](https://animeshxd.github.io/private/streamlink_apache2_ngrok.py) -- streamlink output.ts link generator with Ngrok  for Google Collab Research (need configuration)
   - [Streamlink_Apache2_Ngrok.ipynb](https://animeshxd.github.io/private/Streamlink_Apache2_Ngrok.ipynb) --streamlink output.ts link generator with Ngrok  for Google Collab Research (recommended)
