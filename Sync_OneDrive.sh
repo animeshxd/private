@@ -11,3 +11,4 @@ mkdir -p ~/.config/onedrive
 cp ./config ~/.config/onedrive/config
 nano ~/.config/onedrive/config
 onedrive
+echo "Directory where the files will be synced ~/OneDrive"
