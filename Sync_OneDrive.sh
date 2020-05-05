@@ -1,5 +1,4 @@
 sudo apt update -y
-sudo apt install streamlink -y --fix-missing
 sudo apt install libcurl4-openssl-dev -y --fix-missing
 sudo apt install libsqlite3-dev -y --fix-missing
 sudo snap install --classic dmd && sudo snap install --classic dub
