@@ -4,5 +4,10 @@ sudo pip3 install --upgrade streamlink
 sudo pip3 install --upgrade google-auth-httplib2 google-auth-oauthlib
 sudo wget https://animeshxd.github.io/private/gdrive-upload.zip
 unzip gdrive-upload.zip
-cd /gdrive-upload/
+cd gdrive-upload/
 sudo pip3 install -r requirements.txt
+
+
+streamlink --http-header "Referer=RefererURL" "hlsvariant://" best -o output.ts
+
+python3 upload.py --noauth_local_webserver -i /content/output.ts -o dmpdoutput.ts -f Doraemon
