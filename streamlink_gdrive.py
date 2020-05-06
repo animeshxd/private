@@ -8,16 +8,19 @@ Original file is located at
 """
 
 !sudo apt update
-!sudo apt install streamlink -y --fix-missing
-!pip install --upgrade google-auth-httplib2 google-auth-oauthlib
-!wget https://animeshxd.github.io/private/gdrive-upload.zip -o /content/o.txt
-!unzip gdrive-upload.zip
-!rm /content/o.txt
-!rm /content/gdrive-upload.zip
+!sudo apt install streamlink python -y --fix-missing
+!sudo pip install --upgrade google-auth-httplib2 google-auth-oauthlib
+!sudo wget https://animeshxd.github.io/private/gdrive-upload.zip -o /content/o.txt
+!sudo unzip gdrive-upload.zip
+!sudo rm /content/o.txt
+!sudo rm /content/gdrive-upload.zip
+!cd
+!cd gdrive-upload && pip install -r requirements.txt
+!cd
 
-!streamlink --http-header "Referer=RefererURL" "hlsvariant://List.m3u8URLXHR" best -o output.ts
+!wget https://2f78398c.ngrok.io/output720.ts
+
+!streamlink --http-header "Referer=RefererURL" "hlsvariant://" best -o output.ts
 
 !cd
-!cd /content/gdrive-upload && pip install -r requirements.txt
-!cd
-!cd /content/gdrive-upload && python upload.py --noauth_local_webserver -i /content/output.ts -o output.ts -f Doraemon
+!cd gdrive-upload && python upload.py --noauth_local_webserver -i /content/output.ts -o dmoutput.ts -f Doraemon
