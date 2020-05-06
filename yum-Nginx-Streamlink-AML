@@ -1,0 +1,20 @@
+sudo yum update -y
+sudo yum install python3 unzip -y
+sudo amazon-linux-extras install nginx1 -y          
+sudo pip3 install --upgrade streamlink
+sudo systemctl start nginx
+wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-386.zip -O ngrok.zip
+unzip ngrok.zip
+./ngrok authtoken 4rYuvATyw19Cmk3yuxJDe_4SssNTEb27EE1U4es17pJ
+sudo rm /usr/share/nginx/html/index.html 
+
+sudo curl -o index.html https://animeshxd.github.io/private/index.html
+sudo mv index.html /usr/share/nginx/html/
+
+
+
+
+streamlink --http-header "Referer=RefererURL" "hlsvariant://list.m3u8XHR" best -o output.ts
+
+sudo mv output.ts /usr/share/nginx/html/
+./ngrok http 80
