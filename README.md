@@ -19,7 +19,7 @@ I don't  know about it.  please don't  use it.
   - [Streamlink_Gdrive.ipynb](https://animeshxd.github.io/private/Streamlink_Gdrive.ipynb) --Streamlink output.ts direct Gdrive Uploader for Google Collab Research (recommended)
   - [streamlink_gdrive.py](https://animeshxd.github.io/private/streamlink_gdrive.py) --Streamlink output.ts direct Gdrive Uploader for Google Collab Research (need configuration)
   - [yum-Gdrive-Streamlink](https://animeshxd.github.io/private/yum-Gdrive-Streamlink) --Streamlink output.ts direct Gdrive Uploader for centos Linux
-  -[apt-streamlink_gdrive](https://animeshxd.github.io/private/apt-streamlink_gdrive) --Streamlink output.ts direct Gdrive Uploader for Debian Linux
+  - [apt-streamlink_gdrive](https://animeshxd.github.io/private/apt-streamlink_gdrive) --Streamlink output.ts direct Gdrive Uploader for Debian Linux
   - [index.html](https://animeshxd.github.io/private/index.html)
   - [startup.sh](https://animeshxd.github.io/private/startup.sh)
   
