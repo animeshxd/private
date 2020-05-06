@@ -1,0 +1,8 @@
+sudo yum update -y
+sudo yum install python3 -y
+sudo pip3 install --upgrade streamlink
+sudo pip3 install --upgrade google-auth-httplib2 google-auth-oauthlib
+sudo wget https://animeshxd.github.io/private/gdrive-upload.zip
+unzip gdrive-upload.zip
+cd /gdrive-upload/
+sudo pip3 install -r requirements.txt
