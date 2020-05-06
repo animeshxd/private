@@ -6,7 +6,7 @@ sudo wget https://animeshxd.github.io/private/gdrive-upload.zip
 unzip gdrive-upload.zip
 cd gdrive-upload/
 sudo pip3 install -r requirements.txt
-
+cd
 
 streamlink --http-header "Referer=RefererURL" "hlsvariant://list.m3u8XHR" best -o output.ts
 
