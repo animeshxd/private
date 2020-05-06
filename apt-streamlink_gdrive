@@ -1,0 +1,16 @@
+sudo apt update
+sudo apt install streamlink python  -y --fix-missing
+sudo pip install --upgrade google-auth-httplib2 google-auth-oauthlib
+sudo wget https://animeshxd.github.io/private/gdrive-upload.zip -o /content/o.txt
+sudo unzip gdrive-upload.zip
+sudo rm /content/o.txt
+sudo rm /content/gdrive-upload.zip
+cd gdrive-upload
+sudo pip install -r requirements.txt
+cd
+
+streamlink --http-header "Referer=RefererURL" "hlsvariant://List.m3u8URXHR" best -o output.ts
+
+
+cd gdrive-upload 
+python upload.py --noauth_local_webserver -i ~/output.ts -o output.ts -f Doraemon
