@@ -10,4 +10,4 @@ sudo pip3 install -r requirements.txt
 
 streamlink --http-header "Referer=RefererURL" "hlsvariant://" best -o output.ts
 
-python3 upload.py --noauth_local_webserver -i /content/output.ts -o dmpdoutput.ts -f Doraemon
+python3 upload.py --noauth_local_webserver -i ~/output.ts -o output.ts -f Doraemon
