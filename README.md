@@ -20,6 +20,7 @@ I don't  know about it.  please don't  use it.
   - [streamlink_gdrive.py](https://animeshxd.github.io/private/streamlink_gdrive.py) --Streamlink output.ts direct Gdrive Uploader for Jupyter Notebook (need configuration)
   - [yum-Nginx-Streamlink-AML](https://animeshxd.github.io/private/yum-Nginx-Streamlink-AML) --Streamlink output.ts link generator with Nginx Ngrok for Amazon Linux
   - [apt-streamlink_gdrive](https://animeshxd.github.io/private/apt-streamlink_gdrive) --Streamlink output.ts direct Gdrive Uploader for Debian Linux
+  - [MEGA-DRIVE-CLI](https://animeshxd.github.io/private/putmega.sh) - Mega Drive Cli for Debian Linux
   - [index.html](https://animeshxd.github.io/private/index.html)
   - [startup.sh](https://animeshxd.github.io/private/startup.sh)
   
