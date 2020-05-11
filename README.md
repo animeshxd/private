@@ -23,4 +23,4 @@ I don't  know about it.  please don't  use it.
   - [MEGA-DRIVE-CLI](https://animeshxd.github.io/private/putmega.sh) - Mega Drive Cli for Debian Linux
   - [index.html](https://animeshxd.github.io/private/index.html)
   - [startup.sh](https://animeshxd.github.io/private/startup.sh)
-  
+  - [JWPlayer_HTML](https://animeshxd.github.io/private/jwplayer.html) --JWPlayer 8.13.8
