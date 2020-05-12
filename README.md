@@ -7,6 +7,7 @@ I don't  know about it.  please don't  use it.
   
   - $`sudo nano streamlink.sh` --add your own ngrok auth code `./ngrok authtoken`
   - $`streamlink --http-header "Referer=RefererURL" "hlsvariant://List.m3u8URLXHR" best -o output.ts` --output.ts generator
+  - $ `ffmpeg -i output.ts -map 0 -c copy output.mp4` --MPEG2 to MP4 converter using $`ffmpeg`
   - $`bash two.sh` --start Ngrok at port 80
  
  
