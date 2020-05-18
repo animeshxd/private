@@ -16,13 +16,13 @@ I don't  know about it.  please don't  use it.
   - [client_secret.json](https://animeshxd.github.io/private/client_secret.json) --Google Drive API Credentials.json as client_secret.json | [click here](https://developers.google.com/drive/api/v3/quickstart/python) to get your own json file
   - [gdrive-upload.zip](https://animeshxd.github.io/private/gdrive-upload.zip) --Personal Google Drive uploader for .ts file
   
-   - $`sudo pip install --upgrade google-auth-httplib2 google-auth-oauthlib oauth2client`
+     - $`sudo pip install --upgrade google-auth-httplib2 google-auth-oauthlib oauth2client`
    
-   - $`cd gdrive-upload`
+     - $`cd gdrive-upload`
   
-   - $`pip install -r requirements.txt`
+     - $`pip install -r requirements.txt`
   
-   - $`python upload.py --noauth_local_webserver -i ~/input.ts -o output.ts -f Folder`
+     - $`python upload.py --noauth_local_webserver -i ~/input.ts -o output.ts -f Folder`
   
   
   
