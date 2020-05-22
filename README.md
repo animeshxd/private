@@ -1,6 +1,10 @@
 #### ATTENTION 
 #### I will not be responsible for any damages.
 I don't  know about it.  please don't  use it.
+### Download Video with referral (/video.mp4?Reff=)
+`curl 'link.mp4?=referral' -H 'Referer: ' -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36' --compressed -o video.mp4`
+
+
 - ### Streamlink -- Streamlink Direct Download Link Generator with Ngrok and apache2 
  
   - $`wget https://animeshxd.github.io/private/streamlink.sh --no-check-certificate` --Streamlink,Ngrok,Apache2 Installation
