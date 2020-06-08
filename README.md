@@ -11,9 +11,10 @@ I don't  know about it.  please don't  use it.
   
   - $`sudo nano streamlink.sh` --add your own ngrok auth code `./ngrok authtoken`
   - $`streamlink --http-header "Referer=RefererURL" "hlsvariant://List.m3u8URLXHR" best -o output.ts` --output.ts generator
-  - $ `ffmpeg -i output.ts -map 0 -c copy output.mp4` --MPEG2 to MP4 converter using $`ffmpeg`
-  - ### Try [HandbreakCLI](https://handbrake.fr/docs/en/1.2.0/cli/command-line-reference.html) if you are facing problems
-    - mjj
+  - $ `ffmpeg -i output.ts -map 0 -c copy output.mp4` --MPEG2 to MP4 converter using https://ffmpeg.org/
+  - ### Try [HandbreakCLI](https://handbrake.fr/docs/en/1.2.0/cli/command-line-reference.html) if you are facing problems with FFMPEG
+    - `sudo apt-get install handbrake-cli`
+    - `HandBrakeCLI -i output.ts -o output.mp4`
   - $`bash two.sh` --start Ngrok at port 80
  
  
