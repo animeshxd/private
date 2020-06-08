@@ -13,7 +13,7 @@ I don't  know about it.  please don't  use it.
   - $`streamlink --http-header "Referer=RefererURL" "hlsvariant://List.m3u8URLXHR" best -o output.ts` --output.ts generator
   - $ `ffmpeg -i output.ts -map 0 -c copy output.mp4` --MPEG2 to MP4 converter using https://ffmpeg.org/
   - #### Try [HandbreakCLI](https://handbrake.fr/docs/en/1.2.0/cli/command-line-reference.html) if you are facing problems with FFMPEG My enemy [mp4 @ 0x55fd3573c700] Could not find tag for codec timed_id3 in stream #2, codec not currently supported in container
-Could not write header for output file #0 (incorrect codec parameters ?): Invalid argument
+Could not write header for output file #0 (incorrect codec parameters ?) Invalid argument
 Stream mapping 
     - `sudo apt-get install handbrake-cli`
     - `HandBrakeCLI -i output.ts -o output.mp4`
