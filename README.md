@@ -15,6 +15,7 @@ I don't  know about it.  please don't  use it.
   - #### Try [HandbreakCLI](https://handbrake.fr/docs/en/1.2.0/cli/command-line-reference.html) if you are facing problems with FFMPEG (My enemy [mp4 @ 0x55fd3573c700] Could not find tag for codec timed_id3 in stream #2, codec not currently supported in container
 Could not write header for output file #0 (incorrect codec parameters ?): Invalid argument
 Stream mapping:)
+
     - `sudo apt-get install handbrake-cli`
     - `HandBrakeCLI -i output.ts -o output.mp4`
   - $`bash two.sh` --start Ngrok at port 80
