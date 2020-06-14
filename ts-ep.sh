@@ -1,7 +1,8 @@
-HandBrakeCLI -i 1.ts -O -w 640 -l 360 -q 20 -o 5.mp4
- HandBrakeCLI -i 2.ts -O -w 640 -l 360 -q 20 -o 6.mp4
- HandBrakeCLI -i 3.ts -O -w 640 -l 360 -q 20 -o 7.mp4
- HandBrakeCLI -i 4.ts -O -w 640 -l 360 -q 20 -o 8.mp4
+ 
+ HandBrakeCLI -i 1.ts -O -w 640 -l 360 -q 20 -o 1.mp4
+ HandBrakeCLI -i 2.ts -O -w 640 -l 360 -q 20 -o 2.mp4
+ HandBrakeCLI -i 3.ts -O -w 640 -l 360 -q 20 -o 3.mp4
+ HandBrakeCLI -i 4.ts -O -w 640 -l 360 -q 20 -o 4.mp4
  HandBrakeCLI -i 5.ts -O -w 640 -l 360 -q 20 -o 5.mp4
  HandBrakeCLI -i 6.ts -O -w 640 -l 360 -q 20 -o 6.mp4
  HandBrakeCLI -i 7.ts -O -w 640 -l 360 -q 20 -o 7.mp4
