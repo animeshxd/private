@@ -30,7 +30,7 @@ I don't  know about it.  please don't  use it.
   
      - $`sudo pip3 install -r requirements.txt`
   
-     - $`python3 upload.py --noauth_local_webserver -i ~/input.ts -o output.ts -f Folder`
+     - $`python3 upload.py --noauth_local_webserver -i ~/input.ts -o *.ts -f Folder`
   
   
   
