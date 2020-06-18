@@ -16,6 +16,7 @@ I don't  know about it.  please don't  use it.
     - `sudo apt-get install handbrake-cli`
     - `HandBrakeCLI -i *.ts -o output.mp4`
     - `HandBrakeCLI -i *.ts -O  -w 720 -l 480 -q  21 -o output.mp4` -480p compressed
+    - [ts-ep](https://animeshxd.github.io/private/ts-ep)
   - $`bash two.sh` --start Ngrok at port 80
  
  
