@@ -1,4 +1,4 @@
-for i in *.ts; do HandBreakCLI -i "$i" -O -w 720 -l 480 -q 21 -o "${i%.*}.mp4"; done
+for i in *.ts; do HandBrakeCLI -i "$i" -O -w 720 -l 480 -q 21 -o "${i%.*}.mp4"; done
 
 printf "file '%s'\n" ./*.mp4 > mylist.txt
 
