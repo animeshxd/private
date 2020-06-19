@@ -1,0 +1,5 @@
+for i in *.ts;
+  do name=`echo "$i" | cut -d'.' -f1`
+  echo "$name"
+  HandBrakeCLI -i "$i" "${name}.mov"
+done
