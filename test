@@ -1,5 +1,4 @@
-for i in *.ts;
-  do name=`echo "$i" | cut -d'.' -f1`
-  echo "$name"
-  HandBrakeCLI -i "$i" "${name}.mov"
-done
+for i in *.ts; do ffmpeg -i "$i" "${i%.*}.mp4"; done
+printf "file '%s'\n" ./*.mp4 > mylist.txt
+ffmpeg -f concat -safe 0 -i mylist.txt -map 0 -c copy apoint.mp4
+HandBrakeCLI -i apoint.mp4 -O -w 720 -l 480 -q 20 -o output.mp4
