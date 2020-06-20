@@ -1,6 +1,6 @@
 RED='\033[0;32m'
 NC='\033[0;97m'
-Enter Folder Name
+echo -e "${GREEN} Enter Folder Name"
 read Folder
 mkdir $Folder
 
