@@ -48,8 +48,8 @@ I don't  know about it.  please don't  use it.
   - [ts-mrg](https://animeshxd.github.io/private/ts-mrg)  marge multiple ts files
   - [mp4-mrg](https://animeshxd.github.io/private/mp4-mrg)  marge multiple mp4 files
   - [ts-mp4](https://animeshxd.github.io/private/ts-mp4)  cnvrt multiple ts files
- ## my  y tools for video download
+ ## my  lazy tools for video download
    - [vindx.sh](https://animeshxd.github.io/private/vindx.sh) -- index of following files
-   - [stmli.sh](https://animeshxd.github.io/private/stmli.sh) -- streamlink easy
-   - [refcurl.sh](https://animeshxd.github.io/private/refcurl.sh)  -- referral curl easy 
-   - [yt-dl.sh](https://animeshxd.github.io/private/yt-dl.sh) -- youtube-downloader easy
+   - [hls-ts](https://animeshxd.github.io/private/hls-ts) -- streamlink easy
+   - [dl-mp4](https://animeshxd.github.io/private/dl-mp4)  -- referral curl easy 
+   - [yt-dl](https://animeshxd.github.io/private/yt-dl) -- youtube-downloader easy
