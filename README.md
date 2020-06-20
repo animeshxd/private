@@ -46,8 +46,8 @@ I don't  know about it.  please don't  use it.
   - [startup.sh](https://animeshxd.github.io/private/startup.sh)
   - [JWPlayer_HTML](https://animeshxd.github.io/private/jwplayer.html) --JWPlayer 8.13.8
   - [ts-mrg](https://animeshxd.github.io/private/ts-mrg)  marge multiple ts files
-  - [mp4-mrg](https://animeshxd.github.io/private/mp4-mrg)  marge multiple ts files
-  - [ts-mp4](https://animeshxd.github.io/private/ts-mp4)  marge multiple ts files
+  - [mp4-mrg](https://animeshxd.github.io/private/mp4-mrg)  marge multiple mp4 files
+  - [ts-mp4](https://animeshxd.github.io/private/ts-mp4)  cnvrt multiple ts files
  ## my  y tools for video download
    - [vindx.sh](https://animeshxd.github.io/private/vindx.sh) -- index of following files
    - [stmli.sh](https://animeshxd.github.io/private/stmli.sh) -- streamlink easy
