@@ -1,5 +1,8 @@
 GREEN='\033[0;32m'
 NC='\033[0;97m'
+echo -e "${GREEN} Enter Folder Name (none to select current)"
+read Folder 
+mkdir $Folder
 echo "Enter the media URL of the file you want to download"
 read link
 echo "checking quality.."
@@ -18,6 +21,8 @@ case "$choice" in
   * ) quality='best';;
 esac
 
-echo $quality
+echo "give output file name:"
 
-streamlink hlsvariant://$link $quality -o $Folder/output.ts
+read output
+
+streamlink hlsvariant://$link $quality -o $Folder/$output.ts
