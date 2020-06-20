@@ -1,0 +1,3 @@
+printf "file '%s'\n" ./*.mp4 > mylist.txt
+
+ffmpeg -f concat -safe 0 -i mylist.txt -map 0 -c copy output.mp4
