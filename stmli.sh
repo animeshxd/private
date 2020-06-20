@@ -20,4 +20,4 @@ esac
 
 echo $quality
 
-streamlink hlsvariant://$link $quality -o output.ts
+streamlink hlsvariant://$link $quality -o $Folder/output.ts
