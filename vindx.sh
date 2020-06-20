@@ -14,7 +14,7 @@ echo -e " ${GREEN}Select Downloader (curl/streamlink/yt-dl)
 1. streamlink
 2. curl
 3. youtube-dl"
-read choice
+read downloader
 echo -e "${NC}"
 case "$downloader" in 
   1 ) bash stmli.sh;;
