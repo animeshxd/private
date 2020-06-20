@@ -1,7 +1,7 @@
 RED='\033[0;32m'
 NC='\033[0;97m'
 echo -e "${GREEN} Enter Folder Name"
-read Folder
+read Folder 
 mkdir $Folder
 
 rm stml.sh refcurl.sh yt-dl.sh
@@ -17,8 +17,8 @@ echo -e " ${GREEN}Select Downloader (curl/streamlink/yt-dl)
 read downloader
 echo -e "${NC}"
 case "$downloader" in 
-  1 ) bash stmli.sh;;
-  2 ) bash refcurl.sh;;
-  3 ) bash yt-dl.sh;;
+  1 ) bash $Folder/stmli.sh;;
+  2 ) bash $Folder/refcurl.sh;;
+  3 ) bash $Folder/yt-dl.sh;;
   * ) echo "invalid";;
 esac
