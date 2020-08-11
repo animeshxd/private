@@ -1,0 +1,26 @@
+1.
+2.check adb is installed or not: adb , adb.exe
+3.Download SDK Platform Tools: https://developer.android.com/studio/releases/platform-tools
+4.		CTRL + J to open Downloads > Show in Folder >  
+
+click on the location bar of Windows Explorer >  
+		type: powershell.exe Expand-Archive -Path platform-tools*.Zip -DestinationPath "C:/"
+5.		      sysdm.cpl
+
+
+
+or,
+
+Right Click on Start Menu and type 'sysdm.cpl'
+
+or
+
+Windows Key + R and type 'sysdm.cpl'
+
+or 
+
+open Start > Windows System > 
+	Control panel > System > Advanced system settings >
+
+6. --->						 Advanced > Environment Variables... > System Variables >
+								      select Path > Edit... > New > add C:\platform-tools 
