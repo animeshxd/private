@@ -5,13 +5,13 @@
 
 click on the location bar of Windows Explorer >  
 		type: powershell.exe Expand-Archive -Path platform-tools*.Zip -DestinationPath "C:/"
-5.		      sysdm.cpl
+5.-->		      sysdm.cpl
 
 
 
 or,
 
-Right Click on Start Menu and type 'sysdm.cpl'
+Right Click on Start Menu > RUN  > type 'sysdm.cpl'
 
 or
 
