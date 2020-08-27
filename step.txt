@@ -23,4 +23,4 @@ open Start > Windows System >
 	Control panel > System > Advanced system settings >
 
 6. --->						 Advanced > Environment Variables... > System Variables >
-								      select Path > Edit... > New > add C:\platform-tools 
+7. *Don't forget to download driver*							      select Path > Edit... > New > add C:\platform-tools 
