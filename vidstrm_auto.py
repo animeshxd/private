@@ -27,7 +27,7 @@ Main_Loop = True
 
 Folder_check = path.exists(f"./Anime_downloader/{Anime_Name}")
 while Folder_check == False:
-    os.mkdir(f"./Anime_downloader/{Anime_Name}")
+    os.makedirs(f"./Anime_downloader/{Anime_Name}")
     break
 
 
