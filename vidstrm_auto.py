@@ -25,7 +25,7 @@ Anime_Episode = 0
 Anime_Start = 0
 Main_Loop = True
 
-Folder_check = path.exists("./Anime_downloader")
+Folder_check = path.exists(f"./Anime_downloader/{Anime_Name}")
 while Folder_check == False:
     os.mkdir(f"./Anime_downloader/{Anime_Name}")
     break
@@ -80,7 +80,7 @@ while Main_Loop:
     stream_json = stream_json.get("file")
 
     # print(stream_json)
-    Anime_download_path = f"./Anime_downloader/{Anime_Name_Full}.mp4"
+    Anime_download_path = f"./Anime_downloader/{Anime_Name}{Anime_Name_Full}.mp4"
 
     with open(Anime_download_path, "wb") as f:
         print("Downloading %s" % Anime_Name_Full)
