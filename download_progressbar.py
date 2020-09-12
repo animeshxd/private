@@ -1,8 +1,8 @@
 import requests
 import sys
 
-link = "https://vidstreaming.io/goto.php?url=aHR0cHM6LyAdeqwrwedffryretgsdFrsftrsvfsfsr9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL2Zlc3RpdmUtYXZlbnVlLTI4ODgwMS9VSkU4WU9fNlpUUlMvMjNhXzE1OTk3NTkzOTgxNDQ3OTcubXA0"
-file_name = "download.mp4"
+link = "Url"
+file_name = "file_name" 
 with open(file_name, "wb") as f:
         print("Downloading %s" % file_name)
         response = requests.get(link, stream=True,allow_redirects=True)
