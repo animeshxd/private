@@ -94,6 +94,7 @@ while search_loop_main:
 
             if list_i == "q" or list_i == "quit":
                 list_i_loop_next = False
+                
 
                 break
             elif list_i.isdigit() == False:
