@@ -12,10 +12,10 @@ import string
 import m3u8
 
 Quality = input(
-    "type:\n\t0: 360p Quality\n\t1: 480p Quality\n\t2: 720p Quality\n\t3: 1080p Quality\n\t> ")
+    "Select Quality :\n\t0: 360p Quality\n\t1: 480p Quality\n\t2: 720p Quality\n\t3: 1080p Quality\n\t> ")
 
 
-search = input("Name: ")
+search = input("Search Anime Name: ")
 
 
 url = f"https://gogo-stream.com/ajax-search.html?keyword={search}"  # url
@@ -61,40 +61,21 @@ while search_loop_main:
             print(Count_t, ": ", rslt2)
 
         synlist = search_t.find_all("a", text=True)
+        # print(synlist)
+
 
         list_i_loop = True
 
         while list_i_loop:
 
-            list_i = input("Select Anime Name: [q] to exit:")
-            Episode_select = input(
-                "Enter Episode Manually: [Y]es or [N]o or [A]ll?: ")
+            list_i = input("Select Anime Name: [q] to exit:\n Select:>")
+            
 
-            if Episode_select.lower() == 'y' or Episode_select.lower() == 'yes':
-                print(" Enter Episode like \nif you want to Download Anime episode 5 to 20 then type 5:20\nif you want to Download Anime episode 5 to last then type 5:a")
-                Anime_Episode_From, Anime_Episode_to = input(
-                    "Enter Episode: ").split(':')
-                print(Anime_Episode_to.isdigit())
-                if Anime_Episode_From.isdigit():
-                    Anime_Episode_From = int(Anime_Episode_From) - 1
-                    select_a = True
-                else:
-                    Anime_Episode_From = 0
 
-                if Anime_Episode_to.isdigit():
-                    select_b = True
-
-                if Anime_Episode_to == 'a':
-                    Anime_All = True
-
-            else:
-                print("Downloading All..")
-                select_a = False
-                select_b = False
+                ##################################################
 
             if list_i == "q" or list_i == "quit":
                 list_i_loop_next = False
-                
 
                 break
             elif list_i.isdigit() == False:
@@ -124,6 +105,41 @@ while search_loop_main:
                 # print(linkisgood, " test")
 
                 Anime_Url = linkisgood.rstrip(string.digits)
+                A_url_total_episode = linkisgood.split('-')
+                print('Total Episode: ',A_url_total_episode[-1])
+                
+                Episode_select = input(
+                "Enter Episode Manually: [Y]es or [N]o or [A]ll?: \n\t  Select:> ")
+
+                if Episode_select.lower() == 'y' or Episode_select.lower() == 'yes':
+                    print(" Enter Episode like \nif you want to Download Anime episode 5 to 20 then type 5:20\nif you want to Download Anime episode 5 to last then type 5:a")
+                    Anime_Episode_From, Anime_Episode_to = input(
+                        "Enter Episode: ").split(':')
+                    print(Anime_Episode_to.isdigit())
+                    if Anime_Episode_From.isdigit():
+                        Anime_Episode_From = int(Anime_Episode_From) - 1
+                        select_a = True
+                    else:
+                        Anime_Episode_From = 0
+
+                    if Anime_Episode_to.isdigit():
+                        select_b = True
+
+                    if Anime_Episode_to == 'a':
+                        Anime_All = True
+
+                else:
+                    print("Downloading All Episode..")
+                    select_a = False
+                    select_b = False
+
+
+
+
+####################################################
+
+
+
                 # print("without ep:",Anime_Url)
 
                 Anime_Name = f"{str_list}"
@@ -155,7 +171,7 @@ while search_loop_main:
 
             Anime_Url = f"https://gogo-stream.com{Anime_Url}"
 
-            print(Anime_Url)
+            # print(Anime_Url)
 
             headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36',
                        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
@@ -175,6 +191,9 @@ while search_loop_main:
                 os.makedirs(f"./Anime_downloader/{Anime_Name}")
                 break
 
+
+
+
             while Main_Loop:
                 # Anime_Episode = 1
                 if select_a:
@@ -184,7 +203,7 @@ while search_loop_main:
 
                 else:
                     Anime_Episode = Anime_Episode + 1
-                    print(Anime_Episode)
+                    # print(Anime_Episode)
 
                 if select_b == True:
                     if Anime_Episode_to == str(Anime_Episode-1):
@@ -198,7 +217,7 @@ while search_loop_main:
                 Anime_download_path = f"./Anime_downloader/{Anime_Name}/{Anime_Name_Full}.mp4"
 
                 reg_url = f"{Anime_Url}{Anime_Episode}"
-                print(reg_url)
+                # print(reg_url) 
 
                 my_request = Request(url=reg_url, headers=headers)
 
@@ -303,7 +322,7 @@ while search_loop_main:
                     for x in Available_quality:
                         check_quality = x['stream_info']['name']
                         print('Available Quality:',
-                              check_quality, '\nIndex No:', lomm)
+                              check_quality)
                         lomm += 1
 
                     lenofmaster_m3u8 = len(master_m3u8.data['playlists'])
@@ -356,29 +375,52 @@ while search_loop_main:
                     sgmn = len(m3u8_segment_uris)
                     sgmn_1 = 0
                     sess = requests.Session()
+                    Anime_download_path_ts = Anime_download_path.split('.')
+                    Anime_download_path = Anime_download_path.replace(f"{Anime_download_path_ts[-1]}","ts")
+
+
                     with open(Anime_download_path, 'wb') as f:
                         for x in m3u8_segment_uris:
                             m3u8_down_link = stream_json.replace(
                                 f'{str(link_no_index)}', f'{x}')
                             r = sess.get(m3u8_down_link)
+                            Size_ts = int(r.headers.get('content-length'))
+                            Size_ts_med = Size_ts / 1024 * 1024
+                            if path.exists(Anime_download_path) == False:
+                              old = 0
+                            else:
+                               mb_old = int(
+                                    (os.stat(Anime_download_path).st_size) / 1024 )
+
+                            dl = 0
                             sgmn_1 = sgmn_1 + 1
                             prsntg = int(sgmn_1 / sgmn * 100)
                             for data in r.iter_content(chunk_size=100000):
+                                dl = len(data) 
+
                                 f.write(data)
-                                old = int(
-                                    (os.stat(Anime_download_path).st_size) / 1024)
+                                # old = int(
+                                #     (os.stat(Anime_download_path).st_size) / 1024)
+                                # speed = mb - dl
+                                speed = dl / 8
+                                
                                 mb = int(
-                                    (os.stat(Anime_download_path).st_size) / 1e+6)
-                                speed = (mb * 1024) - old
-                                if speed >= 0:
-                                    speed = speed
-                                else:
-                                    speed = 0
+                                    (os.stat(Anime_download_path).st_size) / (1024 * 1024))
+                                mb_new = mb * 1024
+                                # speed = mb_new - mb_old
+                                
+                                # if speed <= 0:
+                                #   speed = 0
+                                # else:
+                                #   speed = mb_new - mb_old
+
                                 sys.stdout.write(
-                                    "\r%s MB Downloaded %s kb/s %s/100" % (mb, speed, prsntg))
+                                    "\r%s MB Downloaded %s KB/s [%s/100]" % (mb, speed , prsntg))
                                 sys.stdout.flush()
 
+
             print("last")
+            
         else:
             print("sorry")
 
@@ -390,6 +432,7 @@ while search_loop_main:
     if Bye_Bye == "1":
         break
     elif Bye_Bye == "2":
+        Count_t = -1
         continue
     else:
         print("Sayonara")
