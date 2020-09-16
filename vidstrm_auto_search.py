@@ -419,7 +419,7 @@ while search_loop_main:
                                   speed = mb_new - mb_old
 
                                 sys.stdout.write(
-                                    "\r%sMB Loaded|%sKB/s|[%s/100%%]" % (mb, speed , prsntg))
+                                    "\r%sMB Downloaded|%sKB/s|[%s/100%%]" % (mb, speed , prsntg))
                                 sys.stdout.flush()
                                 # sys.stdout.write("\r[%s%s]"% ('*' * done, '.' * (40-done)))
                                 # sys.stdout.flush()
