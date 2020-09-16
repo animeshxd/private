@@ -53,3 +53,9 @@ I don't  know about it.  please don't  use it.
    - [hls-ts](https://animeshxd.github.io/private/hls-ts) -- streamlink easy
    - [dl-mp4](https://animeshxd.github.io/private/dl-mp4)  -- referral curl easy 
    - [yt-dl](https://animeshxd.github.io/private/yt-dl) -- youtube-downloader easy
+ ## [vidstrm_auto_search.py](https://animeshxd.github.io/private/vidstrm_auto_search.py) -- Gogo-stream downloader
+   - Required: python3 
+   - `pip3 install m3u8 bs4'
+   - make sure you are not running this code inside root directory as it will create ./Anime_downloader folder
+   
+ 
