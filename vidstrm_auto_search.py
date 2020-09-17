@@ -10,6 +10,7 @@ import requests
 import sys
 import string
 import m3u8
+import time
 
 
 Quality = input(
@@ -385,8 +386,10 @@ while search_loop_main:
                         for x in m3u8_segment_uris:
                             m3u8_down_link = stream_json.replace(
                                 f'{str(link_no_index)}', f'{x}')
+                            start_r_time = time.time()
                             r = sess.get(m3u8_down_link)
-                            Size_ts = int(r.headers.get('content-length'))
+                            Size_ts = int(r.headers.get('content-length')) / 1024
+                            speed = Size_ts / (time.time()-start_r_time)
                             Size_ts_med = Size_ts / 1024 * 1024
                             if path.exists(Anime_download_path) == False:
                               old = 0
@@ -399,27 +402,17 @@ while search_loop_main:
                             prsntg = int(sgmn_1 / sgmn * 100)
                             
                             # done = int(40 * sgmn_1 / sgmn)
-                            for content in r.iter_content(chunk_size=100000):
+                            for data in r.iter_content(chunk_size=100000):
                                 # dl = len(data) 
 
-                                f.write(content)
-                                # old = int(
-                                #     (os.stat(Anime_download_path).st_size) / 1024)
-                                # speed = mb - dl
-                                # speed = dl / 8
-                                
+                                f.write(data)
+                            
                                 mb = int(
                                     (os.stat(Anime_download_path).st_size) / (1024 * 1024))
                                 mb_new = mb * 1024
-                                speed = mb_new - mb_old
-                                
-                                if speed < 0:
-                                  speed = 0
-                                else:
-                                  speed = mb_new - mb_old
 
                                 sys.stdout.write(
-                                    "\r%sMB Downloaded|%sKB/s|[%s/100%%]" % (mb, speed , prsntg))
+                                    "\r%sMB Loaded|%2.fKB/s|[%s/100%%]" % (mb, speed , prsntg))
                                 sys.stdout.flush()
                                 # sys.stdout.write("\r[%s%s]"% ('*' * done, '.' * (40-done)))
                                 # sys.stdout.flush()
