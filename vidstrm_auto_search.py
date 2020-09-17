@@ -287,16 +287,22 @@ while search_loop_main:
                 if stream_json_1_Status_mp4 == True:  # nobk
                     # stream_json_url = stream_json_1
 
-                    with open(f"{Anime_download_path}.ts", "wb") as f:
+                    with open(Anime_download_path, "wb") as f:
                         print("Downloading %s" % Anime_Name_Full)
                         response = requests.get(
                             stream_json_1, stream=True, allow_redirects=True)
                         total_length = response.headers.get('content-length')
-                        print(total_length)
-                        File_s = int(int(total_length) / 1e+6)
+                        # print(total_length)
+                        # if path.exists(Anime_download_path) == False:
+                        #   mb = 0
+                        # else:
+                        #   mb = int((os.stat(Anime_download_path).st_size) / 1e+6)
+                        
+                      
 
                         if total_length is None:  # no content length header
                             f.write(response.content)
+                          
                         else:
                             dl = 0
                             total_length = int(total_length)
@@ -305,13 +311,17 @@ while search_loop_main:
                                 dl += len(data)
                                 f.write(data)
                                 done = int(40 * dl / total_length)
-                                mb = int(
-                                    (os.stat(Anime_download_path).st_size) / 1e+6)
-                                sys.stdout.write(
-                                    "\r %s /%sMB[%s%s]" % (mb, File_s, total_length / 1e+6, '█' * done, ' ' * (40-done)))
+                                if path.exists(Anime_download_path) == False:
+                                  mb = 0
+                                else:
+                                  mb = int((os.stat(Anime_download_path).st_size) / 1e+6)
+
+                                sys.stdout.write("\r %s/%2.fMB[%s%s]" % (mb, total_length / 1e+6, '█' * done, ' ' * (40-done)))
                                 sys.stdout.flush()
 
                 else:
+
+
 
                     master_m3u8 = m3u8.load(uri=stream_json, headers={
                                             'Referer': f'{vidstreaming}'})
@@ -391,12 +401,7 @@ while search_loop_main:
                             Size_ts = int(r.headers.get('content-length')) / 1024
                             speed = Size_ts / (time.time()-start_r_time)
                             Size_ts_med = Size_ts / 1024 * 1024
-                            if path.exists(Anime_download_path) == False:
-                              old = 0
-                            else:
-                               mb_old = int(
-                                    (os.stat(Anime_download_path).st_size) / 1024 )
-
+              
                             dl = 0
                             sgmn_1 = sgmn_1 + 1
                             prsntg = int(sgmn_1 / sgmn * 100)
